@@ -6,4 +6,28 @@
   });
 </script>
 
-<div style="height: 400px; width: 400px; z-index: 99999999">Test</div>
+<div id="nice-crx-overlay">
+  <img src="https://petapixel.com/assets/uploads/2022/07/DALLEcopy.jpg" />
+</div>
+
+<style>
+#nice-crx-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(7, 51, 92, 0.808);
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999999;
+}
+
+
+#nice-crx-overlay img {
+  width: 66vmin;
+  box-shadow: 0 0 3rem 1rem rgba(0, 0, 0, 0.5);
+}
+</style>
