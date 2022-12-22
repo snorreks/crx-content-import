@@ -1,37 +1,27 @@
 {
-	"extends": "../../../tsconfig.base.json",
-	"compilerOptions": {
-		"moduleResolution": "node",
-		"target": "es2020",
-		"importsNotUsedAsValues": "error",
-		"isolatedModules": true,
-		"sourceMap": true,
-		"types": ["svelte", "node"],
-		"strict": false,
-		"esModuleInterop": true,
-		"skipLibCheck": true,
-		"composite": true,
-		"forceConsistentCasingInFileNames": true,
-		"declaration": true,
-		"baseUrl": ".",
-		"paths": {
-			"@shared/constants": ["../constants/src"],
-			"@shared/types": ["../types/src"],
-			"@shared/utils": ["../utils/src"],
-			"@shared/frontend/utils": ["../frontend/utils/src"],
-			"$types": ["src/lib/types"],
-			"$i18n": ["../../mailvideo/frontend/i18n/src"],
-			"$i18n/*": ["../../mailvideo/frontend/i18n/src/*"]
-		}
-	},
-	"files": [],
-	"include": [],
-	"references": [
-		{
-			"path": "./tsconfig.lib.json"
-		},
-		{
-			"path": "./tsconfig.spec.json"
-		}
-	]
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "target": "es2020",
+    "importsNotUsedAsValues": "error",
+    "isolatedModules": true,
+    "sourceMap": true,
+    "types": ["svelte", "node"],
+    "strict": false,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "composite": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "baseUrl": "."
+  },
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "./tsconfig.lib.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    }
+  ]
 }
