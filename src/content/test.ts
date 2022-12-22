@@ -1,14 +1,14 @@
-import { Test } from '$components';
+import { Test } from "$components";
 
-const overlayTargetId = 'test';
+const overlayTargetId = "nice-crx-wrapper";
 
 export default () => {
-	const target =
-		document.querySelector(`#${overlayTargetId}`) ||
-		document.createElement('div');
+  const target =
+    document.querySelector(`#${overlayTargetId}`) ||
+    document.createElement("div");
 
-	document.body.appendChild(target);
-	target.innerHTML = '';
-	target.id = overlayTargetId;
-	new Test({ target });
+  document.body.appendChild(target);
+  target.innerHTML = "";
+  target.id = overlayTargetId;
+  new Test({ target });
 };
