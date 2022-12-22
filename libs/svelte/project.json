@@ -1,0 +1,70 @@
+{
+	"$schema": "../../../node_modules/nx/schemas/project-schema.json",
+	"name": "shared-svelte",
+	"sourceRoot": "libs/shared/svelte/src",
+	"projectType": "library",
+	"targets": {
+		"lint": {
+			"executor": "@nrwl/linter:eslint",
+			"outputs": ["{options.outputFile}"],
+			"options": {
+				"lintFilePatterns": [
+					"libs/shared/svelte/**/*.{ts,svelte,spec.ts}"
+				]
+			}
+		},
+		"check": {
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "svelte-check",
+				"cwd": "libs/shared/svelte"
+			}
+		},
+		"test": {
+			"executor": "@nxext/vitest:vitest",
+			"options": {
+				"command": "run"
+			}
+		},
+		"storybook": {
+			"executor": "@nrwl/storybook:storybook",
+			"options": {
+				"uiFramework": "@storybook/svelte",
+				"port": 4400,
+				"config": {
+					"configFolder": "libs/shared/svelte/.storybook"
+				}
+			},
+			"configurations": {
+				"ci": {
+					"quiet": true
+				}
+			}
+		},
+		"build-storybook": {
+			"executor": "@nrwl/storybook:build",
+			"outputs": ["{options.outputPath}"],
+			"options": {
+				"uiFramework": "@storybook/svelte",
+				"outputPath": "dist/storybook/shared/svelte",
+				"staticDir": ["libs/assets"],
+				"config": {
+					"configFolder": "libs/shared/svelte/.storybook"
+				},
+				"assets": [
+					{
+						"glob": "**/*",
+						"input": "libs/assets/",
+						"output": "/assets/"
+					}
+				]
+			},
+			"configurations": {
+				"ci": {
+					"quiet": true
+				}
+			}
+		}
+	},
+	"tags": ["scope:shared", "type:ui", "frontend"]
+}

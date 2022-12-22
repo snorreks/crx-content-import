@@ -1,0 +1,23 @@
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"outDir": "../../../dist/out-tsc",
+		"module": "commonjs",
+		"types": ["vitest", "node"]
+	},
+	"include": [
+		"**/*.test.ts",
+		"**/*.spec.ts",
+		"**/*.svelte",
+		"**/*.d.ts",
+		"svelte.config.js",
+		"windi.config.ts",
+		"../../../windi.config.ts",
+		".eslintrc.cjs",
+		"postcss.config.cjs",
+		"src/lib/types/index.ts",
+		"vitest.config.ts",
+		"../../../vitest.config.ts",
+		".storybook"
+	]
+}
