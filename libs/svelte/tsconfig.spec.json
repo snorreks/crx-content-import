@@ -11,13 +11,6 @@
 		"**/*.svelte",
 		"**/*.d.ts",
 		"svelte.config.js",
-		"windi.config.ts",
-		"../../../windi.config.ts",
 		".eslintrc.cjs",
-		"postcss.config.cjs",
-		"src/lib/types/index.ts",
-		"vitest.config.ts",
-		"../../../vitest.config.ts",
-		".storybook"
 	]
 }
