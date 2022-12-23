@@ -15,3 +15,9 @@
 </script>
 
 <div class="{classes} {$$props.class}" />
+
+<!-- <style lang="scss">
+	div {
+		opacity: 1;
+	}
+</style> -->
