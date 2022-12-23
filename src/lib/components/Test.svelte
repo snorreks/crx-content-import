@@ -1,12 +1,9 @@
 <script>
-  import { onMount } from "svelte";
-
-  onMount(() => {
-    console.log("Test component mounted");
-  });
+  import { BaseAvatar, BaseDivider } from "$libs/svelte";
 </script>
 
 <div id="nice-crx-overlay">
+  <BaseDivider/>
   <img src="https://petapixel.com/assets/uploads/2022/07/DALLEcopy.jpg" />
 </div>
 
@@ -20,6 +17,7 @@
   background: rgba(7, 51, 92, 0.808);
   padding: 24px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 99999999;
