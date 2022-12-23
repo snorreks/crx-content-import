@@ -1,13 +1,8 @@
 <script>
   import { BaseAvatar, BaseDivider } from "$libs/svelte";
-
-  onMount(() => {
-    console.log("Test component mounted");
-  });
 </script>
 
 <div id="nice-crx-overlay">
-  <BaseAvatar/>
   <BaseDivider/>
   <img src="https://petapixel.com/assets/uploads/2022/07/DALLEcopy.jpg" />
 </div>
